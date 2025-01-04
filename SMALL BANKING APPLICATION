@@ -1,0 +1,77 @@
+import java.util.Scanner;
+public class banking {
+    public static void main(String[] args) {
+        int amount = 0;
+        Scanner sc = new Scanner (System.in);
+        System.out.println("\t[][][][][][][][ AGL Banking System ][][][][][][][][] ");
+        int a = 1 ;
+        while (a == 1) {
+            System.out.println("if you want \n1.Deposit \n2.Withdrawl \n3.Check Balance \n4.Loan Offers \n5.Exit");
+            int b = sc.nextInt();
+            if (b == 1){
+                System.out.println("you select Deposit How much Deposited");
+                int c = sc.nextInt();
+                amount = amount + c;
+                System.out.println("you deposited successfully");
+            }
+            else if (b == 2) {
+                System.out.println("you select withdrawl");
+                int e = sc.nextInt();
+                if (amount>= e ){
+                    System.out.println("you have amount in account");
+                    
+                    amount = amount - e ;
+                    System.out.println("you have withdrawl succesfully");
+                
+
+                }
+                else{
+                    System.out.println("you have less amount in your account");
+
+                }
+
+            }   
+            else if (b == 3) 
+            {
+                System.out.println("You select Checking Balance");
+                System.out.println("your Balance amount is :"+ amount);
+                
+            } 
+            else if(b == 4){
+                System.out.println("some offers are there \n1.Home Loan \n2.Agriculture Loan \n3.Jewel Loan");
+                int loan = sc.nextInt();
+                if (loan == 1) {
+                    System.out.println("You select house loan in this have only 5% interest \nContact with +91 xxxxxx143");
+                    
+                } 
+                else if (loan == 2) {
+                    System.out.println("You select Agriculture loan in this have only 2% interest \n Contact with +91 xxxxxx465");
+                    
+                }
+                else if (loan == 3) {
+                    System.out.println("You select Jewel loan in this have only 7% interest \nContact with +91 xxxxxx4123");
+                    
+                }
+                else {
+                    System.out.println("Select correct one");
+                }
+            }    
+            else if (b == 5) 
+            {
+                System.out.println("you need to exit from this ");
+            }
+                
+            
+            System.out.println("if you want again select anyone if \n.Yes = 1 \nNo = 2 ");
+            int choice = sc.nextInt();   
+            if (choice == 1) {
+                a  = 1;
+            }
+            else{
+                a = 2;
+            }    
+        }
+    System.out.println("\t============ Thank you ========== ");    
+    }
+
+}
